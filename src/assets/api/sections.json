@@ -1,7 +1,7 @@
 {
     "sections":[
         {
-            "id":1,
+            "id": 1,
             "title": "json-server",
             "author": "typicode"
         }
@@ -9,15 +9,13 @@
     "formInfo": [
         {
             "ids": 1,
-            "uiTypeId":"textInput",
             "label": "First Name",
             "labelClasss": "form-label",
             "type": "text",
             "placeholder": "First Name",
             "isDisable": false,
             "minlength": 5,
-            "maxlength": 15,
-            "isVisible": true
+            "maxlength": 15
         },
         {
             "ids": 2,
@@ -27,8 +25,7 @@
             "placeholder": "Second Name",
             "isDisable": false,
             "minlength": 5,
-            "maxlength": 15,
-            "isVisible": true
+            "maxlength": 15
         },
         {
             "ids": 3,
@@ -38,8 +35,7 @@
             "placeholder": "xya@xyz.com",
             "isDisable": false,
             "minlength": 5,
-            "maxlength": 15,
-            "isVisible": true
+            "maxlength": 15
         },
         {
             "ids": 4,
@@ -49,8 +45,7 @@
             "placeholder": "",
             "isDisable": false,
             "minlength": 5,
-            "maxlength": 15,
-            "isVisible": true
+            "maxlength": 15
         }
     ],
     "courseInfo": [
