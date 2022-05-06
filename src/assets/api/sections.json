@@ -1,0 +1,88 @@
+{
+    "sections":[
+        {
+            "id":1,
+            "title": "json-server",
+            "author": "typicode"
+        }
+    ],
+    "formInfo": [
+        {
+            "ids": 1,
+            "label": "First Name",
+            "labelClasss": "form-label",
+            "type": "text",
+            "placeholder": "First Name",
+            "isDisable": false,
+            "minlength": 5,
+            "maxlength": 15
+        },
+        {
+            "ids": 2,
+            "label": "Second Name",
+            "labelClasss": "form-label",
+            "type": "text",
+            "placeholder": "Second Name",
+            "isDisable": false,
+            "minlength": 5,
+            "maxlength": 15
+        },
+        {
+            "ids": 3,
+            "label": "Email",
+            "labelClasss": "form-label",
+            "type": "email",
+            "placeholder": "xya@xyz.com",
+            "isDisable": false,
+            "minlength": 5,
+            "maxlength": 15
+        },
+        {
+            "ids": 4,
+            "label": "Phone",
+            "labelClasss": "form-label",
+            "type": "tel",
+            "placeholder": "",
+            "isDisable": false,
+            "minlength": 5,
+            "maxlength": 15
+        }
+    ],
+    "courseInfo": [
+        {
+            "value": "courses",
+            "options": "Select Course",
+            "selectedAttr": "selected"
+        },
+        {
+            "value": "bca",
+            "options": "BCA",
+            "selectedAttr": ""
+        },
+        {
+            "value": "bba",
+            "options": "BBA",
+            "selectedAttr": ""
+        },
+        {
+            "value": "bTech",
+            "options": "B.Tech",
+            "selectedAttr": ""
+        },
+        {
+            "value": "mba",
+            "options": "MBA",
+            "selectedAttr": ""
+        },
+        {
+            "value": "mca",
+            "options": "MCA",
+            "selectedAttr": ""
+        },
+        {
+            "value": "mTech",
+            "options": "M.Tech",
+            "selectedAttr": ""
+        }
+    ]
+}
