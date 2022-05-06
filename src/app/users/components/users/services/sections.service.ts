@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class SectionsService {
   apiGetForm = "http://localhost:3000/formInfo";
-  apiSelectOptions = " http://localhost:3000/courseInfo";
+  apiSelectOptions = "http://localhost:3000/courseInfo";
   // apiGetForm = "./src/assets/api/sections.json";
   // apiSelectOptions = "./src/assets/api/sections.json";
 
