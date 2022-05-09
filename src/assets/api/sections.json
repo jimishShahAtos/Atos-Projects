@@ -1,13 +1,7 @@
 {
-    "sections":[
-        {
-            "id": 1,
-            "title": "json-server",
-            "author": "typicode"
-        }
-    ],
     "formInfo": [
         {
+            "formType":"inputText",
             "ids": 1,
             "label": "First Name",
             "labelClasss": "form-label",
@@ -18,6 +12,7 @@
             "maxlength": 15
         },
         {
+            "formType":"inputText",
             "ids": 2,
             "label": "Second Name",
             "labelClasss": "form-label",
@@ -28,6 +23,7 @@
             "maxlength": 15
         },
         {
+            "formType":"inputText",
             "ids": 3,
             "label": "Email",
             "labelClasss": "form-label",
@@ -38,6 +34,7 @@
             "maxlength": 15
         },
         {
+            "formType":"inputText",
             "ids": 4,
             "label": "Phone",
             "labelClasss": "form-label",
@@ -46,43 +43,54 @@
             "isDisable": false,
             "minlength": 5,
             "maxlength": 15
-        }
-    ],
-    "courseInfo": [
-        {
-            "value": "courses",
-            "options": "Select Course",
-            "selectedAttr": "selected"
         },
         {
-            "value": "bca",
-            "options": "BCA",
-            "selectedAttr": ""
-        },
-        {
-            "value": "bba",
-            "options": "BBA",
-            "selectedAttr": ""
-        },
-        {
-            "value": "bTech",
-            "options": "B.Tech",
-            "selectedAttr": ""
-        },
-        {
-            "value": "mba",
-            "options": "MBA",
-            "selectedAttr": ""
-        },
-        {
-            "value": "mca",
-            "options": "MCA",
-            "selectedAttr": ""
-        },
-        {
-            "value": "mTech",
-            "options": "M.Tech",
-            "selectedAttr": ""
+            "formType":"select",
+            "ids": 5,
+            "label": "Select Courses",
+            "labelClasss": "form-label",
+            "type": "Select",
+            "placeholder": "",
+            "isDisable": false,
+            "minlength": 5,
+            "maxlength": 15,
+            "courseInfo": [
+                {
+                    "value": "courses",
+                    "options": "Select Course",
+                    "selectedAttr": "selected"
+                },
+                {
+                    "value": "bca",
+                    "options": "BCA",
+                    "selectedAttr": ""
+                },
+                {
+                    "value": "bba",
+                    "options": "BBA",
+                    "selectedAttr": ""
+                },
+                {
+                    "value": "bTech",
+                    "options": "B.Tech",
+                    "selectedAttr": ""
+                },
+                {
+                    "value": "mba",
+                    "options": "MBA",
+                    "selectedAttr": ""
+                },
+                {
+                    "value": "mca",
+                    "options": "MCA",
+                    "selectedAttr": ""
+                },
+                {
+                    "value": "mTech",
+                    "options": "M.Tech",
+                    "selectedAttr": ""
+                }
+            ]
         }
     ]
 }

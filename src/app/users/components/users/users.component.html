@@ -1,14 +1,11 @@
+<!-- https://www.youtube.com/watch?v=YXfDM5MvpRg&ab_channel=CodeShotsWithProfanis -->
 <div class="container card w-50 p-4 bg-light rounded shadow">
     <h2>{{title}}</h2>
 
     <div class="formSection mb-3" *ngFor="let userInfo of formData">
         <label [for]="userInfo.ids" [class]="userInfo.labelClasss">{{userInfo.label}}</label>
-        <input [type]="userInfo.type" class="form-control" [id]="userInfo.ids" [placeholder]="userInfo.placeholder" [disabled]="userInfo.isDisable" maxlength="25" />
-    </div>
-
-    <div class="formSection mb-2">
-        <label>Select Courses</label>
-        <select class="form-select" aria-label="Default select">
+        <input *ngIf="userInfo.formType==='inputText'" [type]="userInfo.type" class="form-control" [id]="userInfo.ids" [placeholder]="userInfo.placeholder" [disabled]="userInfo.isDisable" maxlength="25" />
+        <select *ngIf="userInfo.formType=='select'" class="form-select" aria-label="Default select">
             <option *ngFor="let infos of formOptionData" [selected]="infos.selectedAttr" [value]="infos.value">{{infos.options}}</option>
         </select>
     </div>
