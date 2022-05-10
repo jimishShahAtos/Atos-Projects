@@ -10,10 +10,16 @@ export class UsersComponent implements OnInit {
   title:string="User Registration";
   formData:any;
   optionsData:any;
+  radioBtnData:any;
+  actionButton="Submit";
 
-  constructor(private formInputData: SectionsService, formOptionData: SectionsService) {
+  constructor(private formInputData: SectionsService, formOptionData: SectionsService, formRadioData: SectionsService) {
     formInputData.getFormInput().subscribe((inputData)=>{
       this.formData = inputData;
+    });
+
+    formRadioData.getRadio().subscribe((radioBtnData)=>{
+      this.radioBtnData = radioBtnData;
     });
 
     formOptionData.getOptions().subscribe((optData)=>{

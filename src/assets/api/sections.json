@@ -61,20 +61,8 @@
             "value": ""
         },
         {
-            "formType": "inputText",
-            "ids": 6,
-            "label": "Gender",
-            "labelClasss": "form-label",
-            "type": "radio",
-            "placeholder": "",
-            "isDisable": false,
-            "minlength": 5,
-            "maxlength": 15,
-            "value": "Male"
-        },
-        {
             "formType": "select",
-            "ids": 7,
+            "ids": 6,
             "label": "Select Courses",
             "labelClasss": "form-label",
             "type": "Select",
@@ -83,6 +71,30 @@
             "minlength": 5,
             "maxlength": 15,
             "values": ""
+        }
+    ],
+    "radioOptions":[
+        {
+            "formType": "radioBtn",
+            "ids": 7,
+            "label": "Gender",
+            "labelInfo":"Male",
+            "labelClasss": "form-label",
+            "type": "radio",
+            "isChecked": false,
+            "isDisable": false,
+            "value": "Male"
+        },
+        {
+            "formType": "radioBtn",
+            "ids": 8,
+            "label": "Gender",
+            "labelInfo":"Female",
+            "labelClass": "form-label form-check-inline",
+            "type": "radio",
+            "isChecked": false,
+            "isDisable": false,
+            "value": "Female"
         }
     ],
     "options": [
