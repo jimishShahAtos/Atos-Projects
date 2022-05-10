@@ -3,19 +3,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UserFormsModule } from './user-forms/user-forms.module';
 import { UsersModule } from './users/users.module';
-import { UserFormsComponent } from './user-forms/components/user-forms/user-forms.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    UserFormsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     UsersModule,
-    HttpClientModule
+    HttpClientModule,
+    UserFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

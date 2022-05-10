@@ -1,8 +1,8 @@
 <div class="container card w-50 p-4 bg-light rounded shadow">
     <h2>{{title}}</h2>
 
-    <div class="formSection mb-3" *ngFor="let userInfo of formData">
-        <label [for]="userInfo.ids" [class]="userInfo.labelClasss">{{userInfo.label}}</label>
+<div class="formSection mb-3" *ngFor="let userInfo of formData">
+        <label [for]="userInfo.    ids" [class]="userInfo.labelClasss">{{userInfo.label}}</label>
         <input *ngIf="userInfo.formType==='inputText'" [type]="userInfo.type" class="form-control" [id]="userInfo.ids" [placeholder]="userInfo.placeholder" [disabled]="userInfo.isDisable" maxlength="25" [value]="userInfo.value" />              
 
         <select *ngIf="userInfo.formType==='select'" class="form-select" [id]="userInfo.ids" [disabled]="userInfo.isDisable" maxlength="25">
