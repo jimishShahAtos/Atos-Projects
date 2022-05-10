@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SectionsService } from './services/sections.service';
 
-
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -10,16 +9,16 @@ import { SectionsService } from './services/sections.service';
 export class UsersComponent implements OnInit {
   title:string="User Registration";
   formData:any;
-  formOptionData:any;
+  optionsData:any;
 
-  constructor(private formInputData: SectionsService, private SelectOptionData: SectionsService) {
+  constructor(private formInputData: SectionsService, formOptionData: SectionsService) {
     formInputData.getFormInput().subscribe((inputData)=>{
       this.formData = inputData;
     });
 
-    SelectOptionData.getselectOptions().subscribe((selectFormData)=>{
-      this.formOptionData = selectFormData;
-    })
+    formOptionData.getOptions().subscribe((optData)=>{
+      this.optionsData = optData;
+    });
   }
 
   ngOnInit(): void {

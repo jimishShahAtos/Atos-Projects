@@ -4,9 +4,19 @@
 
     <div class="formSection mb-3" *ngFor="let userInfo of formData">
         <label [for]="userInfo.ids" [class]="userInfo.labelClasss">{{userInfo.label}}</label>
-        <input *ngIf="userInfo.formType==='inputText'" [type]="userInfo.type" class="form-control" [id]="userInfo.ids" [placeholder]="userInfo.placeholder" [disabled]="userInfo.isDisable" maxlength="25" />
-        <select *ngIf="userInfo.formType=='select'" class="form-select" aria-label="Default select">
-            <option *ngFor="let infos of formOptionData" [selected]="infos.selectedAttr" [value]="infos.value">{{infos.options}}</option>
+        <input *ngIf="userInfo.formType==='inputText'" [type]="userInfo.type" class="form-control" [id]="userInfo.ids" [placeholder]="userInfo.placeholder" [disabled]="userInfo.isDisable" maxlength="25" [value]="userInfo.value" />
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radioInline" id="inlineRadioDefault">
+            <label class="form-check-label" for="inlineRadioDefault">Default radio</label>
+        </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="radioInline" id="inlineRadioChecked" checked="">
+        <label class="form-check-label" for="inlineRadioChecked">Default checked radio</label>
+        </div>
+
+        <select *ngIf="userInfo.formType=='select'" class="form-select" [id]="userInfo.ids" [disabled]="userInfo.isDisable" maxlength="25">
+            <option *ngFor="let options of optionsData" [selected]="options.selectedAttr" [value]="options.values">{{options.optionList}}</option>
         </select>
     </div>
 </div>

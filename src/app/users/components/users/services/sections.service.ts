@@ -7,14 +7,15 @@ import { HttpClient } from '@angular/common/http';
 
 export class SectionsService {
   apiGetForm = "http://localhost:3000/formInfo";
-  apiSelectOptions = "http://localhost:3000/courseInfo";
+  apiGetOptions = "http://localhost:3000/options";
 
   constructor(private http:HttpClient) { }
 
   getFormInput(){
     return this.http.get(this.apiGetForm);
   }
-  getselectOptions(){
-    return this.http.get(this.apiSelectOptions);
+
+  getOptions(){
+    return this.http.get(this.apiGetOptions);
   }
 }

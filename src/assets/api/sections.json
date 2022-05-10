@@ -1,7 +1,7 @@
 {
     "formInfo": [
         {
-            "formType":"inputText",
+            "formType": "inputText",
             "ids": 1,
             "label": "First Name",
             "labelClasss": "form-label",
@@ -9,10 +9,11 @@
             "placeholder": "First Name",
             "isDisable": false,
             "minlength": 5,
-            "maxlength": 15
+            "maxlength": 15,
+            "value": ""
         },
         {
-            "formType":"inputText",
+            "formType": "inputText",
             "ids": 2,
             "label": "Second Name",
             "labelClasss": "form-label",
@@ -20,10 +21,11 @@
             "placeholder": "Second Name",
             "isDisable": false,
             "minlength": 5,
-            "maxlength": 15
+            "maxlength": 15,
+            "value": ""
         },
         {
-            "formType":"inputText",
+            "formType": "inputText",
             "ids": 3,
             "label": "Email",
             "labelClasss": "form-label",
@@ -31,22 +33,48 @@
             "placeholder": "xya@xyz.com",
             "isDisable": false,
             "minlength": 5,
-            "maxlength": 15
+            "maxlength": 15,
+            "value": ""
         },
         {
-            "formType":"inputText",
+            "formType": "inputText",
             "ids": 4,
             "label": "Phone",
             "labelClasss": "form-label",
-            "type": "tel",
+            "type": "number",
+            "placeholder": "+91-xxx-xxx-xxxx",
+            "isDisable": false,
+            "minlength": 5,
+            "maxlength": 15,
+            "value": "+91"
+        },
+        {
+            "formType": "inputText",
+            "ids": 5,
+            "label": "Date of Birth",
+            "labelClasss": "form-label",
+            "type": "date",
             "placeholder": "",
             "isDisable": false,
             "minlength": 5,
-            "maxlength": 15
+            "maxlength": 15,
+            "value": ""
         },
         {
-            "formType":"select",
-            "ids": 5,
+            "formType": "inputText",
+            "ids": 6,
+            "label": "Gender",
+            "labelClasss": "form-label",
+            "type": "radio",
+            "placeholder": "",
+            "isDisable": false,
+            "minlength": 5,
+            "maxlength": 15,
+            "value": "Male"
+        },
+        {
+            "formType": "select",
+            "ids": 7,
             "label": "Select Courses",
             "labelClasss": "form-label",
             "type": "Select",
@@ -54,43 +82,44 @@
             "isDisable": false,
             "minlength": 5,
             "maxlength": 15,
-            "courseInfo": [
-                {
-                    "value": "courses",
-                    "options": "Select Course",
-                    "selectedAttr": "selected"
-                },
-                {
-                    "value": "bca",
-                    "options": "BCA",
-                    "selectedAttr": ""
-                },
-                {
-                    "value": "bba",
-                    "options": "BBA",
-                    "selectedAttr": ""
-                },
-                {
-                    "value": "bTech",
-                    "options": "B.Tech",
-                    "selectedAttr": ""
-                },
-                {
-                    "value": "mba",
-                    "options": "MBA",
-                    "selectedAttr": ""
-                },
-                {
-                    "value": "mca",
-                    "options": "MCA",
-                    "selectedAttr": ""
-                },
-                {
-                    "value": "mTech",
-                    "options": "M.Tech",
-                    "selectedAttr": ""
-                }
-            ]
+            "values": ""
+        }
+    ],
+    "options": [
+        {
+            "value": "courses",
+            "optionList": "Select Course",
+            "selectedAttr": "selected"
+        },
+        {
+            "value": "bca",
+            "options": "BCA",
+            "selectedAttr": ""
+        },
+        {
+            "value": "bba",
+            "options": "BBA",
+            "selectedAttr": ""
+        },
+        {
+            "value": "bTech",
+            "options": "B.Tech",
+            "selectedAttr": ""
+        },
+        {
+            "value": "mba",
+            "options": "MBA",
+            "selectedAttr": ""
+        },
+        {
+            "value": "mca",
+            "options": "MCA",
+            "selectedAttr": ""
+        },
+        {
+            "value": "mTech",
+            "options": "M.Tech",
+            "selectedAttr": ""
         }
     ]
 }
