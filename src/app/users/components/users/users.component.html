@@ -1,22 +1,90 @@
 <div class="container card w-50 p-4 bg-light rounded shadow">
-    <h2>{{title}}</h2>
+    <h2 class="text-primary">{{title}}</h2>
 
-    <div class="formSection mb-3" *ngFor="let userInfo of formData">
-        <label [for]="userInfo.ids" [class]="userInfo.labelClasss">{{userInfo.label}}</label>
-        <input *ngIf="userInfo.formType==='inputText'" [type]="userInfo.type" class="form-control" [id]="userInfo.ids" [placeholder]="userInfo.placeholder" [disabled]="userInfo.isDisable" maxlength="25" [value]="userInfo.value" />              
+    <div class="formSection mb-3" *ngFor="let userInfo of formData;let i = index;">
+        <label 
+            [for]="userInfo.ids" 
+            [class]="userInfo.labelClasss">
+                <i class="text-info fa fa-solid fa-angle-right"></i>
+                    {{userInfo.label}}
+        </label>
 
-        <select *ngIf="userInfo.formType==='select'" class="form-select" [id]="userInfo.ids" [disabled]="userInfo.isDisable" maxlength="25">
-            <option *ngFor="let options of optionsData" [selected]="options.selectedAttr" [value]="options.values">{{options.optionList}}</option>
-        </select>
-    </div>
-    <div class="readioButtonSection">
-        <label>Gender</label><br />
-        <div class="form-check form-check-inline" *ngFor="let selectRadio of radioBtnData">
+        <input 
+            *ngIf="userInfo.formType==='inputText' && userInfo.isVisible===true" 
+            [type]="userInfo.type" 
+            class="form-control" 
+            [id]="userInfo.ids" 
+            [placeholder]="userInfo.placeholder" 
+            [disabled]="userInfo.isDisable" 
+            maxlength="25" 
+            [value]="userInfo.value" 
+            autocomplete="off" />
+
+        
+            <input 
+            *ngIf="userInfo.formType==='inputRadio' && userInfo.isVisible===true" 
+            [type]="userInfo.type" 
+            [class]="userInfo.labelClass" 
+            [name]="userInfo.name" 
+            [id]="userInfo.id" 
+            [autocomplete]="userInfo.autocomplete" 
+            [checked]="userInfo.checked"
+            [value]="userInfo.radioLabel"
+            />
+            <label [class]="userInfo.labelClass" [for]="userInfo.id">{{userInfo.radioLabel}}</label>
+        
+        
+        <!-- <div *ngIf="userInfo.formType==='inputRadio' && userInfo.isVisible===true">,mbv,jv,jvj,mnb,
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group" >
+               
+            </div>
+        </div> -->
             
-            <input class="form-check-input" [type]="selectRadio.type" name="radioInline" [id]="selectRadio.ids" *ngIf="selectRadio.formType==='radioBtn'" [checked]="selectRadio.isChecked" [disabled]="selectRadio.isDisable" />
-            <label [class]="selectRadio.labelClass" [for]="selectRadio.ids">{{selectRadio.labelInfo}}</label>
-        </div>
-    </div> 
+        <textarea 
+            *ngIf="userInfo.formType==='textArea'" 
+            class="form-control h-100" 
+            [id]="userInfo.ids"
+            [placeholder]="userInfo.placeholder" 
+            [disabled]="userInfo.isDisable"
+            autocomplete="off"></textarea>
+
+        <select 
+            *ngIf="userInfo.formType==='select' || userInfo.isDisable===true" 
+            class="form-select" 
+            [id]="userInfo.ids" 
+            [disabled]="userInfo.isDisable" 
+            maxlength="25">
+                <option 
+                    *ngFor="let options of optionsData" 
+                    [selected]="options.selectedAttr" 
+                    [value]="options.values">
+                        {{options.optionList}}
+                </option>
+        </select>
+
+      
+
+        <!-- <div *ngIf="userInfo.formType==='inputRadio'"> -->
+            <!-- <div class="form-check form-check-inline" *ngFor="let selectRadio of formData.radioBtnData;let i = index;">             -->
+            <!-- <div class="form-check form-check-inline">
+                <input 
+                    *ngFor="let userInfo of formData.selectRadio"
+                    class="form-check-input" 
+                    [type]="userInfo.type" 
+                    name="radioInline" 
+                    [id]="userInfo.formData.ids"
+                    [checked]="userInfo.isChecked" 
+                    [disabled]="userInfo.formData.isDisable"
+                    [value]="userInfo.value" />
+        
+                    <label 
+                        [class]="userInfo.formData.labelClass" 
+                        [for]="userInfo.ids">
+                            {{userInfo.labelInfo | json}}
+                    </label>
+            </div>
+        </div> -->
+    </div>
 
     <div class="buttonSection">
         <button type="button" class="btn btn-primary">{{actionButton}}</button>        

@@ -6,21 +6,19 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class SectionsService {
-  apiGetForm = "http://localhost:3000/formInfo";
-  apiGetOptions = "http://localhost:3000/options";
-  apiGetRadio = "http://localhost:3000/radioOptions";
+  apiGetForm = "http://localhost:3000";
 
   constructor(private http:HttpClient) { }
 
   getFormInput(){
-    return this.http.get(this.apiGetForm);
+    return this.http.get(this.apiGetForm + "/formInfo");
   }
 
   getRadio(){
-    return this.http.get(this.apiGetRadio);
+    return this.http.get(this.apiGetForm + "/formInfo/radioOptions");
   }
 
   getOptions(){
-    return this.http.get(this.apiGetOptions);
+    return this.http.get(this.apiGetForm + "/options");
   }
 }

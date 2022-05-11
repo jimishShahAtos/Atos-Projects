@@ -4,10 +4,11 @@
             "formType": "inputText",
             "ids": 1,
             "label": "First Name",
-            "labelClasss": "form-label",
+            "labelClasss": "form-label me-2",
             "type": "text",
             "placeholder": "First Name",
             "isDisable": false,
+            "isVisible":true,
             "minlength": 5,
             "maxlength": 15,
             "value": ""
@@ -15,88 +16,117 @@
         {
             "formType": "inputText",
             "ids": 2,
-            "label": "Second Name",
-            "labelClasss": "form-label",
+            "label": "Last Name",
+            "labelClasss": "form-label me-2",
             "type": "text",
-            "placeholder": "Second Name",
+            "placeholder": "Last Name",
             "isDisable": false,
+            "isVisible":true,
             "minlength": 5,
             "maxlength": 15,
             "value": ""
         },
         {
+            "label": "Gender",
+            "radioOptions":[
+                {
+                    "formType": "inputRadio",
+                    "type": "radio",
+                    "name":"btnGroupRadio",
+                    "ids": "btnRadio1",
+                    "autocomplete":"off",
+                    "checked": true,
+                    "labelClass":"btn btn-outline-primary",
+                    "radioLabel":"Male",
+                    "isDisable": false,
+                    "isVisible":true
+                },
+                {
+                    "formType": "inputRadio",
+                    "type": "radio",
+                    "name":"btnGroupRadio",
+                    "ids": "btnRadio2",
+                    "autocomplete":"off",
+                    "checked": false,
+                    "labelClass":"btn btn-outline-primary",
+                    "radioLabel":"Female",
+                    "isDisable": false,
+                    "isVisible":true
+                },
+                {
+                    "type": "radio",
+                    "name":"btnGroupRadio",
+                    "ids": "btnRadio3",
+                    "autocomplete":"off",
+                    "checked": false,
+                    "labelClass":"btn btn-outline-primary",
+                    "radioLabel":"Other"
+                }
+            ]
+        },
+        {
             "formType": "inputText",
-            "ids": 3,
+            "ids": 5,
             "label": "Email",
-            "labelClasss": "form-label",
+            "labelClasss": "form-label me-2",
             "type": "email",
             "placeholder": "xya@xyz.com",
             "isDisable": false,
+            "isVisible":true,
             "minlength": 5,
             "maxlength": 15,
             "value": ""
         },
         {
             "formType": "inputText",
-            "ids": 4,
+            "ids": 6,
             "label": "Phone",
             "labelClasss": "form-label",
             "type": "number",
             "placeholder": "+91-xxx-xxx-xxxx",
             "isDisable": false,
+            "isVisible":true,
             "minlength": 5,
             "maxlength": 15,
             "value": "+91"
         },
         {
-            "formType": "inputText",
-            "ids": 5,
-            "label": "Date of Birth",
+            "formType": "textArea",
+            "ids": 15,
+            "label": "Address",
             "labelClasss": "form-label",
+            "type": "textarea",
+            "placeholder": "Enter the Address",
+            "isDisable": false,
+            "isVisible":true
+        },
+        {
+            "formType": "inputText",
+            "ids": 7,
+            "label": "Date of Birth",
+            "labelClasss": "form-label me-2",
             "type": "date",
             "placeholder": "",
             "isDisable": false,
+            "isVisible":true,
             "minlength": 5,
             "maxlength": 15,
             "value": ""
-        },
+        },        
         {
             "formType": "select",
-            "ids": 6,
+            "ids": 7,
             "label": "Select Courses",
-            "labelClasss": "form-label",
+            "labelClasss": "form-label me-2",
             "type": "Select",
             "placeholder": "",
             "isDisable": false,
+            "isVisible":false,
             "minlength": 5,
             "maxlength": 15,
             "values": ""
         }
-    ],
-    "radioOptions":[
-        {
-            "formType": "radioBtn",
-            "ids": 7,
-            "label": "Gender",
-            "labelInfo":"Male",
-            "labelClasss": "form-label",
-            "type": "radio",
-            "isChecked": false,
-            "isDisable": false,
-            "value": "Male"
-        },
-        {
-            "formType": "radioBtn",
-            "ids": 8,
-            "label": "Gender",
-            "labelInfo":"Female",
-            "labelClass": "form-label form-check-inline",
-            "type": "radio",
-            "isChecked": false,
-            "isDisable": false,
-            "value": "Female"
-        }
-    ],
+    ],    
     "options": [
         {
             "value": "courses",
