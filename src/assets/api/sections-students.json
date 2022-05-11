@@ -1,0 +1,137 @@
+{
+    "formInfo": [
+        {
+            "formType": "inputText",
+            "ids": 1,
+            "label": "First Name",
+            "labelClasss": "form-label",
+            "type": "text",
+            "placeholder": "First Name",
+            "isDisable": false,
+            "minlength": 5,
+            "maxlength": 15,
+            "value": ""
+        },
+        {
+            "formType": "inputText",
+            "ids": 2,
+            "label": "Second Name",
+            "labelClasss": "form-label",
+            "type": "text",
+            "placeholder": "Second Name",
+            "isDisable": false,
+            "minlength": 5,
+            "maxlength": 15,
+            "value": ""
+        },
+        {
+            "formType": "inputText",
+            "ids": 3,
+            "label": "Email",
+            "labelClasss": "form-label",
+            "type": "email",
+            "placeholder": "xya@xyz.com",
+            "isDisable": false,
+            "minlength": 5,
+            "maxlength": 15,
+            "value": ""
+        },
+        {
+            "formType": "inputText",
+            "ids": 4,
+            "label": "Phone",
+            "labelClasss": "form-label",
+            "type": "number",
+            "placeholder": "+91-xxx-xxx-xxxx",
+            "isDisable": false,
+            "minlength": 5,
+            "maxlength": 15,
+            "value": "+91"
+        },
+        {
+            "formType": "inputText",
+            "ids": 5,
+            "label": "Date of Birth",
+            "labelClasss": "form-label",
+            "type": "date",
+            "placeholder": "",
+            "isDisable": false,
+            "minlength": 5,
+            "maxlength": 15,
+            "value": ""
+        },
+        {
+            "formType": "select",
+            "ids": 6,
+            "label": "Select Courses",
+            "labelClasss": "form-label",
+            "type": "Select",
+            "placeholder": "",
+            "isDisable": false,
+            "minlength": 5,
+            "maxlength": 15,
+            "values": ""
+        }
+    ],
+    "radioOptions":[
+        {
+            "formType": "radioBtn",
+            "ids": 7,
+            "label": "Gender",
+            "labelInfo":"Male",
+            "labelClasss": "form-label",
+            "type": "radio",
+            "isChecked": false,
+            "isDisable": false,
+            "value": "Male"
+        },
+        {
+            "formType": "radioBtn",
+            "ids": 8,
+            "label": "Gender",
+            "labelInfo":"Female",
+            "labelClass": "form-label form-check-inline",
+            "type": "radio",
+            "isChecked": false,
+            "isDisable": false,
+            "value": "Female"
+        }
+    ],
+    "options": [
+        {
+            "value": "courses",
+            "optionList": "Select Course",
+            "selectedAttr": "selected"
+        },
+        {
+            "value": "bca",
+            "options": "BCA",
+            "selectedAttr": ""
+        },
+        {
+            "value": "bba",
+            "options": "BBA",
+            "selectedAttr": ""
+        },
+        {
+            "value": "bTech",
+            "options": "B.Tech",
+            "selectedAttr": ""
+        },
+        {
+            "value": "mba",
+            "options": "MBA",
+            "selectedAttr": ""
+        },
+        {
+            "value": "mca",
+            "options": "MCA",
+            "selectedAttr": ""
+        },
+        {
+            "value": "mTech",
+            "options": "M.Tech",
+            "selectedAttr": ""
+        }
+    ]
+}

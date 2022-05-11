@@ -1,0 +1,12 @@
+.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+form.ng-invalid.ng-touched{
+    border: none;
+}
+.ng-valid{
+    border: 1px solid green;
+}
+.textAreaBox{
+    height: 100px;
+}

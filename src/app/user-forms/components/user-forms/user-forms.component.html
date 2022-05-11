@@ -1,4 +1,66 @@
+<div class="container bg-light border w-50 p-5 m-auto">
+    <h2 class="mb-4" id="registrationForm">{{title}}</h2>
 
-    <div class="container">
-        
-    </div>   
+    <form [formGroup]="reactiveRegistrationForms" (ngSubmit)="onSubmit()">
+        <!-- <div class="form-floating mb-3" *ngFor="let userForm of formInfo">
+            <input *ngIf=userForm.formType=="inputText"  [type]="userForm.type" class="form-control" [id]="userForm.id" placeholder="First Name" [formControlName]="userForm.formControlName" [maxlength]="userForm.maxlength" [autocomplete]="userForm.autocomplete" />
+            <label [for]="userForm.id">{{userForm.label}}</label>
+        </div> -->
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingFirstName" placeholder="First Name" formControlName="firstName" maxlength="25" autocomplete="off" />
+            <label for="userForm.id">First Name</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingLastName" placeholder="Last Name" formControlName="lastName" maxlength="25" autocomplete="off" />
+            <label for="floatingLastName">Last Name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" formControlName="email" autocomplete="off" />
+            <label for="floatingEmail">Email address</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="date" class="form-control" id="floatingDob" placeholder="Date Of birth" formControlName="dob" autocomplete="off" />
+            <label for="floatingDob">Date Of Birth</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control phoneInput" id="floatingPhone" placeholder="Enter Phone" maxlength="10" formControlName="phone" />
+            <label for="floatingPhone">Phone Number</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <textarea class="form-control textAreaBox" autocomplete="off" placeholder="Enter the Address" id="addr" formControlName="addr"></textarea>
+            <label for="addr">Address</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <select class="form-select" id="floatingGender" aria-label="Floating label select Gender" formControlName="gender">
+                <option value="select" selected="selected">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <label for="floatingGender">Gender</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <select class="form-select" id="floatingCourses" aria-label="Floating label select Courses" formControlName="courseName">
+                <option value="Course" selected="selected">Course</option>
+                <option value="BCA">BCA</option>
+                <option value="BBA">BBA</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="MBA">MBA</option>
+                <option value="MCA">MCA</option>
+                <option value="M.Tech">M.Tech</option>
+            </select>
+            <label for="floatingCourses">Select Courses</label>
+        </div>
+
+        <div class="mb-3">
+            <input class="btn btn-primary me-2" type="submit" value="Submit" />
+            <input class="btn btn-secondary" type="reset" value="Reset" />
+        </div>
+    </form>
+</div>
