@@ -10,27 +10,6 @@ export class UserFormsComponent implements OnInit {
   title="Registration Form";
   reactiveRegistrationForms:FormGroup;
 
-  // "formInfo": [
-  //   {
-  //       "formType": "inputText",
-  //       "type": "text",
-  //       "id":"floatingFirstName",
-  //       "formControlName":"firstName",
-  //       "maxlength":25,
-  //       "autocomplete":"off",
-  //       "label":"First Name"
-  //   },
-  //   {
-  //       "formType": "inputText",
-  //       "type": "text",
-  //       "id":"floatingLastName",
-  //       "formControlName":"lastName",
-  //       "maxlength":25,
-  //       "autocomplete":"off",
-  //       "label":"Last Name"
-  //   }
-  // ]
-
   constructor(private formBuilder:FormBuilder) {
     this.reactiveRegistrationForms = new FormGroup({
       formArrays: this.formBuilder.array([])
