@@ -1,17 +1,17 @@
 {
     "formInfo": [
-        {
-            "formType": "inputText",
-            "ids": 1,
-            "label": "First Name",
-            "labelClasss": "form-label",
-            "type": "text",
-            "placeholder": "First Name",
-            "isDisable": false,
-            "minlength": 5,
-            "maxlength": 15,
-            "value": ""
-        },
+    {
+        "formType": "inputText",
+        "ids": 1,
+        "label": "First Name",
+        "labelClasss": "form-label",
+        "type": "text",
+        "placeholder": "First Name",
+        "isDisable": false,
+        "minlength": 5,
+        "maxlength": 15,
+        "value": ""
+    },
         {
             "formType": "inputText",
             "ids": 2,

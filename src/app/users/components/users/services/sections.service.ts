@@ -17,10 +17,10 @@ export class SectionsService {
   }
 
   getRadio(){
-    return this.http.get(this.apiGetRadio);
+    return this.http.get(this.apiGetOptions);
   }
 
   getOptions(){
-    return this.http.get(this.apiGetOptions);
+    return this.http.get(this.apiGetRadio);
   }
 }
