@@ -11,14 +11,6 @@ export class SectionsService {
   constructor(private http:HttpClient) { }
 
   getFormInput(){
-    return this.http.get(this.apiGetForm + "/formInfo");
-  }
-
-  getRadio(){
-    return this.http.get(this.apiGetForm + "/formInfo/radioOptions");
-  }
-
-  getOptions(){
-    return this.http.get(this.apiGetForm + "/options");
+    return this.http.get(this.apiGetForm+"/sections");
   }
 }

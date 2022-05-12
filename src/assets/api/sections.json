@@ -1,167 +1,90 @@
 {
-    "formInfo": [
+    "sections": [
         {
-            "formType": "inputText",
-            "ids": 1,
-            "label": "First Name",
-            "labelClasss": "form-label me-2",
-            "type": "text",
-            "placeholder": "First Name",
-            "isDisable": false,
-            "isVisible":true,
-            "minlength": 5,
-            "maxlength": 15,
-            "value": ""
-        },
-        {
-            "formType": "inputText",
-            "ids": 2,
-            "label": "Last Name",
-            "labelClasss": "form-label me-2",
-            "type": "text",
-            "placeholder": "Last Name",
-            "isDisable": false,
-            "isVisible":true,
-            "minlength": 5,
-            "maxlength": 15,
-            "value": ""
-        },
-        {
-            "label": "Gender",
-            "radioOptions":[
+            "sectionId": 1,
+            "sectionName": "Input Sections",
+            "inputSection": [
                 {
-                    "formType": "inputRadio",
-                    "type": "radio",
-                    "name":"btnGroupRadio",
-                    "ids": "btnRadio1",
-                    "autocomplete":"off",
-                    "checked": true,
-                    "labelClass":"btn btn-outline-primary",
-                    "radioLabel":"Male",
-                    "isDisable": false,
-                    "isVisible":true
-                },
-                {
-                    "formType": "inputRadio",
-                    "type": "radio",
-                    "name":"btnGroupRadio",
-                    "ids": "btnRadio2",
-                    "autocomplete":"off",
-                    "checked": false,
-                    "labelClass":"btn btn-outline-primary",
-                    "radioLabel":"Female",
-                    "isDisable": false,
-                    "isVisible":true
-                },
-                {
-                    "type": "radio",
-                    "name":"btnGroupRadio",
-                    "ids": "btnRadio3",
-                    "autocomplete":"off",
-                    "checked": false,
-                    "labelClass":"btn btn-outline-primary",
-                    "radioLabel":"Other"
+                    "sectionId": 1.1,
+                    "sectionName": "firstSection",
+                    "isVisible": true,
+                    "uiObjects": [
+                        {
+                            "formType": "inputGroup",
+                            "label": "",
+                            "inputOptions": [
+                                {
+                                    "ids": 1,
+                                    "name": "btnGroupInput",                                    
+                                    "inputLabel": "First Name",
+                                    "isDisable": false,
+                                    "isVisible": true
+                                },
+                                {
+                                    "name": "btnGroupInput",
+                                    "ids": 2,
+                                    "inputLabel": "Last Name",
+                                    "isDisable": false,
+                                    "isVisible": true
+                                },
+                                {
+                                    "name": "btnGroupInput",
+                                    "ids": 3,
+                                    "inputLabel": "Address Line 1",
+                                    "isDisable": false,
+                                    "isVisible": true
+                                },
+                                {
+                                    "name": "btnGroupInput",
+                                    "ids": 4,
+                                    "inputLabel": "Address Line 2",
+                                    "isDisable": false,
+                                    "isVisible": true
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
         {
-            "formType": "inputText",
-            "ids": 5,
-            "label": "Email",
-            "labelClasss": "form-label me-2",
-            "type": "email",
-            "placeholder": "xya@xyz.com",
-            "isDisable": false,
-            "isVisible":true,
-            "minlength": 5,
-            "maxlength": 15,
-            "value": ""
-        },
-        {
-            "formType": "inputText",
-            "ids": 6,
-            "label": "Phone",
-            "labelClasss": "form-label",
-            "type": "number",
-            "placeholder": "+91-xxx-xxx-xxxx",
-            "isDisable": false,
-            "isVisible":true,
-            "minlength": 5,
-            "maxlength": 15,
-            "value": "+91"
-        },
-        {
-            "formType": "textArea",
-            "ids": 15,
-            "label": "Address",
-            "labelClasss": "form-label",
-            "type": "textarea",
-            "placeholder": "Enter the Address",
-            "isDisable": false,
-            "isVisible":true
-        },
-        {
-            "formType": "inputText",
-            "ids": 7,
-            "label": "Date of Birth",
-            "labelClasss": "form-label me-2",
-            "type": "date",
-            "placeholder": "",
-            "isDisable": false,
-            "isVisible":true,
-            "minlength": 5,
-            "maxlength": 15,
-            "value": ""
-        },        
-        {
-            "formType": "select",
-            "ids": 7,
-            "label": "Select Courses",
-            "labelClasss": "form-label me-2",
-            "type": "Select",
-            "placeholder": "",
-            "isDisable": false,
-            "isVisible":false,
-            "minlength": 5,
-            "maxlength": 15,
-            "values": ""
-        }
-    ],    
-    "options": [
-        {
-            "value": "courses",
-            "optionList": "Select Course",
-            "selectedAttr": "selected"
-        },
-        {
-            "value": "bca",
-            "options": "BCA",
-            "selectedAttr": ""
-        },
-        {
-            "value": "bba",
-            "options": "BBA",
-            "selectedAttr": ""
-        },
-        {
-            "value": "bTech",
-            "options": "B.Tech",
-            "selectedAttr": ""
-        },
-        {
-            "value": "mba",
-            "options": "MBA",
-            "selectedAttr": ""
-        },
-        {
-            "value": "mca",
-            "options": "MCA",
-            "selectedAttr": ""
-        },
-        {
-            "value": "mTech",
-            "options": "M.Tech",
-            "selectedAttr": ""
+            "sectionId": 2,
+            "sectionName": "Radio Sections",
+            "radioSection": [
+                {
+                    "sectionId_1": 2.1,
+                    "sectionName": "firstRadioSection",
+                    "uiObjects": [
+                        {
+                            "formType": "radioGroup",
+                            "label": "Gender",
+                            "radioOptions": [
+                                {
+                                    "ids": 2.2,
+                                    "name": "btnGroupRadio",                                    
+                                    "inputLabel": "Male",
+                                    "isDisable": false,
+                                    "isVisible": true
+                                },
+                                {
+                                    "name": "btnGroupRadio",
+                                    "ids": 2.3,
+                                    "inputLabel": "Female",
+                                    "isDisable": false,
+                                    "isVisible": true
+                                },
+                                {
+                                    "name": "btnGroupRadio",
+                                    "ids": 2.4,
+                                    "inputLabel": "Other",
+                                    "isDisable": false,
+                                    "isVisible": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

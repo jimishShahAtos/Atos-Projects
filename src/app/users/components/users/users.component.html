@@ -1,15 +1,40 @@
 <div class="container card w-50 p-4 bg-light rounded shadow">
     <h2 class="text-primary">{{title}}</h2>
+    <div class="section_0" *ngFor="let formData of formInfo" style="display: none">
+        <p>{{formData.sectionId}}</p>
+        <p>{{formData.sectionName}}</p>
+        <div class="section_2" *ngFor="let inputData of formInfo[0].inputSection">
+            <p>{{inputData.sectionId}}</p>  
+            <p>{{inputData.sectionName}}</p>  
+            <div class="section_3" *ngFor="let uiData of formInfo[0].inputSection[0].uiObjects">
+                <p>{{uiData.formType}}</p> 
+                
+                <div class="section_4" *ngFor="let inputOptData of formInfo[0].inputSection[0].uiObjects[0].inputOptions">
+                    <p>{{inputOptData.ids}}</p>  
+                    <p>{{inputOptData.name}}</p>  
+                    <p>{{inputOptData.inputLabel}}</p>  
+                    <p>{{inputOptData.inputLabel}}</p>  
+                </div>
+            </div>
+        </div>        
+    </div>
+    <!-- END Input Section -->
 
-    <div class="formSection mb-3" *ngFor="let userInfo of formData;let i = index;">
-        <label 
-            [for]="userInfo.ids" 
-            [class]="userInfo.labelClasss">
-                <i class="text-info fa fa-solid fa-angle-right"></i>
-                    {{userInfo.label}}
-        </label>
+    <!-- Radio Sections -->
+    <div class="section_2" *ngFor="let radioFormData of formInfo">
+        <div class="section_2_1" *ngFor="let radioFormData of formInfo[1].radioSection">
+            <p><strong>id:</strong> {{radioFormData.sectionId_1}}</p>
+        </div>
+    </div>
 
-        <input 
+    
+    
+
+    <div class="formSection mb-3">
+        
+       
+
+        <!-- <input 
             *ngIf="userInfo.formType==='inputText' && userInfo.isVisible===true" 
             [type]="userInfo.type" 
             class="form-control" 
@@ -19,20 +44,21 @@
             maxlength="25" 
             [value]="userInfo.value" 
             autocomplete="off" />
-
         
-            <input 
-            *ngIf="userInfo.formType==='inputRadio' && userInfo.isVisible===true" 
-            [type]="userInfo.type" 
-            [class]="userInfo.labelClass" 
-            [name]="userInfo.name" 
-            [id]="userInfo.id" 
-            [autocomplete]="userInfo.autocomplete" 
-            [checked]="userInfo.checked"
-            [value]="userInfo.radioLabel"
+            <div class="radioClass" *ngFor="let getRadio of formInfo; let i = index">
+                <input 
+            *ngIf="userInfo.formType==='radioGroup' && getRadio.isVisible===true" 
+            [type]="getRadio.type" 
+            [class]="getRadio.labelClass" 
+            [name]="getRadio.name" 
+            [id]="getRadio.id" 
+            [autocomplete]="getRadio.autocomplete" 
+            [checked]="getRadio.checked"
+            [value]="getRadio.radioLabel"
             />
-            <label [class]="userInfo.labelClass" [for]="userInfo.id">{{userInfo.radioLabel}}</label>
-        
+            <label [class]="getRadio.labelClass" [for]="getRadio.id">{{getRadio.radioLabel}}</label>
+            </div>
+         -->
         
         <!-- <div *ngIf="userInfo.formType==='inputRadio' && userInfo.isVisible===true">,mbv,jv,jvj,mnb,
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group" >
@@ -40,15 +66,15 @@
             </div>
         </div> -->
             
-        <textarea 
+        <!-- <textarea 
             *ngIf="userInfo.formType==='textArea'" 
             class="form-control h-100" 
             [id]="userInfo.ids"
             [placeholder]="userInfo.placeholder" 
             [disabled]="userInfo.isDisable"
-            autocomplete="off"></textarea>
+            autocomplete="off"></textarea> -->
 
-        <select 
+        <!-- <select 
             *ngIf="userInfo.formType==='select' || userInfo.isDisable===true" 
             class="form-select" 
             [id]="userInfo.ids" 
@@ -59,8 +85,8 @@
                     [selected]="options.selectedAttr" 
                     [value]="options.values">
                         {{options.optionList}}
-                </option>
-        </select>
+                </option> -->
+        <!-- </select> -->
 
       
 
@@ -86,7 +112,7 @@
         </div> -->
     </div>
 
-    <div class="buttonSection">
+    <!-- <div class="buttonSection">
         <button type="button" class="btn btn-primary">{{actionButton}}</button>        
-    </div>
+    </div> -->
 </div>
