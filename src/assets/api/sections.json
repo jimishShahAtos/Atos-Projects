@@ -80,8 +80,6 @@
             },
             "dropDownSection":{               
                 "uiObjects": {
-                    "ids":"hobbies",
-                    "label":"Hobbies",
                     "selectOptions": [
                         {
                             "ids":1,
