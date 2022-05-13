@@ -1,90 +1,116 @@
 {
     "sections": [
         {
-            "sectionId": 1,
-            "sectionName": "Input Sections",
-            "inputSection": [
-                {
-                    "sectionId": 1.1,
-                    "sectionName": "firstSection",
-                    "isVisible": true,
-                    "uiObjects": [
+            "inputSection": {
+                "sectionId": 1.1,
+                "sectionName": "firstSection",
+                "isVisible": true,
+                "uiObjects": {
+                    "formType": "inputGroup",
+                    "label": "",
+                    "inputOptions": [
                         {
-                            "formType": "inputGroup",
-                            "label": "",
-                            "inputOptions": [
-                                {
-                                    "ids": 1,
-                                    "name": "btnGroupInput",                                    
-                                    "inputLabel": "First Name",
-                                    "isDisable": false,
-                                    "isVisible": true
-                                },
-                                {
-                                    "name": "btnGroupInput",
-                                    "ids": 2,
-                                    "inputLabel": "Last Name",
-                                    "isDisable": false,
-                                    "isVisible": true
-                                },
-                                {
-                                    "name": "btnGroupInput",
-                                    "ids": 3,
-                                    "inputLabel": "Address Line 1",
-                                    "isDisable": false,
-                                    "isVisible": true
-                                },
-                                {
-                                    "name": "btnGroupInput",
-                                    "ids": 4,
-                                    "inputLabel": "Address Line 2",
-                                    "isDisable": false,
-                                    "isVisible": true
-                                }
-                            ]
+                            "name": "btnGroupInput",
+                            "ids": 1,
+                            "type": "text",
+                            "inputLabel": "First Name",
+                            "isDisable": false,
+                            "isVisible": false
+                        },
+                        {
+                            "name": "btnGroupInput",
+                            "ids": 2,
+                            "type": "text",
+                            "inputLabel": "Last Name",
+                            "isDisable": false,
+                            "isVisible": true
+                        },
+                        {
+                            "name": "btnGroupInput",
+                            "ids": 3,
+                            "type": "date",
+                            "inputLabel": "Date Of Birth",
+                            "isDisable": false,
+                            "isVisible": true
+                        },
+                        {
+                            "name": "btnGroupInput",
+                            "ids": 4,
+                            "type": "email",
+                            "inputLabel": "Email",
+                            "isDisable": false,
+                            "isVisible": true
                         }
                     ]
                 }
-            ]
-        },
-        {
-            "sectionId": 2,
-            "sectionName": "Radio Sections",
-            "radioSection": [
-                {
-                    "sectionId_1": 2.1,
-                    "sectionName": "firstRadioSection",
-                    "uiObjects": [
+            },
+            "radioSection":{
+                "sectionId_2": 2.1,
+                "sectionName": "firstRadioSection",
+                "uiObjects": {
+                    "formType": "radioGroup",
+                    "label": "Gender",
+                    "radioOptions": [
                         {
-                            "formType": "radioGroup",
-                            "label": "Gender",
-                            "radioOptions": [
-                                {
-                                    "ids": 2.2,
-                                    "name": "btnGroupRadio",                                    
-                                    "inputLabel": "Male",
-                                    "isDisable": false,
-                                    "isVisible": true
-                                },
-                                {
-                                    "name": "btnGroupRadio",
-                                    "ids": 2.3,
-                                    "inputLabel": "Female",
-                                    "isDisable": false,
-                                    "isVisible": true
-                                },
-                                {
-                                    "name": "btnGroupRadio",
-                                    "ids": 2.4,
-                                    "inputLabel": "Other",
-                                    "isDisable": false,
-                                    "isVisible": true
-                                }
-                            ]
+                            "ids": "selectMale",
+                            "type": "radio",
+                            "name": "btnGroupRadio",
+                            "radioLabel": "Male",
+                            "isDisable": false,
+                            "isVisible": true
+                        },
+                        {
+                            "ids": "selectFeMale",
+                            "type": "radio",
+                            "name": "btnGroupRadio",
+                            "radioLabel": "Female",
+                            "isDisable": false,
+                            "isVisible": true
+                        },
+                        {
+                            "ids": "selectOthers",
+                            "type": "radio",
+                            "name": "btnGroupRadio",
+                            "radioLabel": "Other",
+                            "isDisable": false,
+                            "isVisible": true
                         }
                     ]
                 }
-            ]
+            },
+            "dropDownSection":{               
+                "uiObjects": {
+                    "ids":"hobbies",
+                    "label":"Hobbies",
+                    "selectOptions": [
+                        {
+                            "ids":1,
+                            "values": 1,
+                            "radioLabel": "Reading"
+                        },
+                        {
+                            "ids":2,
+                            "values": 2,
+                            "radioLabel": "Movies"
+                        },
+                        {
+                            "ids":3,
+                            "values": 3,
+                            "radioLabel": "Sports"
+                        },
+                        {
+                            "ids":4,
+                            "values": 4,
+                            "radioLabel": "Cooking"
+                        },
+                        {
+                            "ids":5,
+                            "values": 5,
+                            "radioLabel": "Travelling"
+                        }
+                    ]
+                }
+            }
         }
     ]
 }
