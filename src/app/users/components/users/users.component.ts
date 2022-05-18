@@ -1,30 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { SectionsService } from './services/sections.service';
+import { FormDetails } from './interface/form-details';
+
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss']
 })
+
 export class UsersComponent implements OnInit {
+  formsDetails: FormDetails[] | undefined; 
+
   title:string="User Registration";
-  formData:any;
+  formInfo:any;
+  sections: any;
   optionsData:any;
   radioBtnData:any;
   actionButton="Submit";
 
-  constructor(private formInputData: SectionsService, formOptionData: SectionsService, formRadioData: SectionsService) {
+  constructor(private formInputData: SectionsService) {
     formInputData.getFormInput().subscribe((inputData)=>{
-      this.formData = inputData;
-    });
-
-    formRadioData.getRadio().subscribe((radioBtnData)=>{
-      this.radioBtnData = radioBtnData;
-    });
-
-    formOptionData.getOptions().subscribe((optData)=>{
-      this.optionsData = optData;
-    });
+      this.formInfo = inputData;
+      console.log(this.formInfo);
+    });    
   }
 
   ngOnInit(): void {
