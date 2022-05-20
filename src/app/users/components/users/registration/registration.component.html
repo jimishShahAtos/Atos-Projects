@@ -1,0 +1,38 @@
+<div class="container card p-4">
+    <h2 class="text-primary mb-3">{{title}}</h2>
+    <form action="">
+        <div class="section_1" *ngFor="let formData of formInfo; let i = index;">
+            <div class="row innerSection_1 mb-3" *ngFor="let inputOpt of formData.inputSection.uiObjects.inputOptions">
+                <label [for]="inputOpt.ids" class="form-label">{{inputOpt.inputLabel}}</label>
+                <div class="col-sm-12">
+                    <input [type]="inputOpt.type" class="form-control form-control-sm" [id]="inputOpt.ids"
+                        [disabled]="inputOpt.isDisable" [required]="inputOpt.required" />
+                </div>
+            </div>
+        </div>
+        <!-- END Input Section -->
+
+        <div class="section_2" *ngFor="let formData_2 of formInfo">
+            <label class="form-check ps-0">Gender</label>
+            <div class="form-check form-check-inline innerSection_2 mb-3"
+                *ngFor="let radioOpts of formData_2.radioSection.uiObjects.radioOptions">
+                <input class="form-check-input" [type]="radioOpts.type" [name]="radioOpts.name" [id]="radioOpts.ids" [required]="radioOpts.required">
+                <label class="form-check-label" [for]="radioOpts.ids">{{radioOpts.radioLabel}}</label>
+            </div>
+        </div>
+
+        <div class="section_3 mb-3" *ngFor="let formData_3 of formInfo">
+            <label for="hobbies" class="form-check ps-0">Hobbies</label>
+            <select class="form-select" name="hobbies" id="hobbies">
+                <option [id]="selectOpts.ids"
+                    *ngFor="let selectOpts of formData_3.dropDownSection.uiObjects.selectOptions"
+                    [value]="selectOpts.values">{{selectOpts.radioLabel}}</option>
+            </select>
+        </div>
+
+        <div class="buttonSection">
+            <input type="submit" class="btn btn-primary me-2" value="Submit" />
+            <input type="reset" class="btn btn-secondary" click="clearInput()" value="Reset" />
+        </div>
+    </form>
+</div>

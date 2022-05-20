@@ -1,0 +1,10 @@
+$width-50: 50%;
+$auto: 0 auto;
+$noEffect:none;
+
+.card{
+    margin: $auto;
+}
+.form-control:focus, .form-select:focus {
+    box-shadow: $noEffect;
+}

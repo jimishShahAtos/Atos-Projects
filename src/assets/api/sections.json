@@ -1,6 +1,24 @@
 {
     "sections": [
         {
+            "tabs":{               
+                "uiObjects": {
+                    "tabbedNav":[
+                        {
+                            "id":"nav-login-tab",
+                            "class":"nav-link active",
+                            "link":"#nav-login",      
+                            "tabName":"Login"
+                        },
+                        {
+                            "id":"nav-registration-tab",
+                            "class":"nav-link",      
+                            "link":"#nav-registration",
+                            "tabName":"Registration"
+                        }
+                    ]
+                }
+            },
             "inputSection": {
                 "sectionId": 1.1,
                 "sectionName": "firstSection",
@@ -15,7 +33,8 @@
                             "type": "text",
                             "inputLabel": "First Name",
                             "isDisable": false,
-                            "isVisible": false
+                            "isVisible": false,
+                            "required": true
                         },
                         {
                             "name": "btnGroupInput",
@@ -23,7 +42,8 @@
                             "type": "text",
                             "inputLabel": "Last Name",
                             "isDisable": false,
-                            "isVisible": true
+                            "isVisible": true,
+                            "required": true
                         },
                         {
                             "name": "btnGroupInput",
@@ -31,7 +51,44 @@
                             "type": "date",
                             "inputLabel": "Date Of Birth",
                             "isDisable": false,
-                            "isVisible": true
+                            "isVisible": true,
+                            "required": true
+                        },                        
+                        {
+                            "name": "btnGroupInput",
+                            "ids": 3.2,
+                            "type": "file",
+                            "inputLabel": "Upload Resume",
+                            "isDisable": false,
+                            "isVisible": true,
+                            "required": true
+                        },
+                        {
+                            "name": "btnGroupInput",
+                            "ids": 3.2,
+                            "type": "month",
+                            "inputLabel": "Joining Date: From",
+                            "isDisable": false,
+                            "isVisible": true,
+                            "required": true
+                        },
+                        {
+                            "name": "btnGroupInput",
+                            "ids": 3.2,
+                            "type": "month",
+                            "inputLabel": "Joining Date: To",
+                            "isDisable": false,
+                            "isVisible": true,
+                            "required": true
+                        },
+                        {
+                            "name": "btnGroupInput",
+                            "ids": 3.2,
+                            "type": "url",
+                            "inputLabel": "Refernce URL",
+                            "isDisable": false,
+                            "isVisible": true,
+                            "required": true
                         },
                         {
                             "name": "btnGroupInput",
@@ -39,7 +96,8 @@
                             "type": "email",
                             "inputLabel": "Email",
                             "isDisable": false,
-                            "isVisible": true
+                            "isVisible": true,
+                            "required": true
                         }
                     ]
                 }
@@ -57,7 +115,8 @@
                             "name": "btnGroupRadio",
                             "radioLabel": "Male",
                             "isDisable": false,
-                            "isVisible": true
+                            "isVisible": true,
+                            "required": true
                         },
                         {
                             "ids": "selectFeMale",
@@ -65,7 +124,8 @@
                             "name": "btnGroupRadio",
                             "radioLabel": "Female",
                             "isDisable": false,
-                            "isVisible": true
+                            "isVisible": true,
+                            "required": true
                         },
                         {
                             "ids": "selectOthers",
@@ -73,7 +133,8 @@
                             "name": "btnGroupRadio",
                             "radioLabel": "Other",
                             "isDisable": false,
-                            "isVisible": true
+                            "isVisible": true,
+                            "required": true
                         }
                     ]
                 }
@@ -81,6 +142,12 @@
             "dropDownSection":{               
                 "uiObjects": {
                     "selectOptions": [
+                        {
+                            "ids":0,
+                            "values": 0,
+                            "radioLabel": "Select",
+                            "selected": "selected"
+                        },
                         {
                             "ids":1,
                             "values": 1,
