@@ -1,0 +1,148 @@
+{
+    "sections": [
+        {
+            "tabs":{               
+                "uiObjects": {
+                    "tabbedNav":[
+                        {
+                            "id":"nav-login-tab",
+                            "class":"nav-link active",
+                            "link":"#nav-login",      
+                            "tabName":"Login"
+                        },
+                        {
+                            "id":"nav-registration-tab",
+                            "class":"nav-link",      
+                            "link":"#nav-registration",
+                            "tabName":"Registration"
+                        }
+                    ]
+                }
+            },
+            "inputSection": {
+                "sectionId": 1.1,
+                "sectionName": "firstSection",
+                "isVisible": true,
+                "uiObjects": {
+                    "formType": "inputGroup",
+                    "label": "",
+                    "inputOptions": [
+                        {
+                            "name": "btnGroupInput",
+                            "ids": 1,
+                            "type": "text",
+                            "inputLabel": "First Name",
+                            "isDisable": false,
+                            "isVisible": false,
+                            "required": true
+                        },
+                        {
+                            "name": "btnGroupInput",
+                            "ids": 2,
+                            "type": "text",
+                            "inputLabel": "Last Name",
+                            "isDisable": false,
+                            "isVisible": true,
+                            "required": true
+                        },
+                        {
+                            "name": "btnGroupInput",
+                            "ids": 3,
+                            "type": "date",
+                            "inputLabel": "Date Of Birth",
+                            "isDisable": false,
+                            "isVisible": true,
+                            "required": true
+                        },                        
+                        {
+                            "name": "btnGroupInput",
+                            "ids": 3.2,
+                            "type": "file",
+                            "inputLabel": "Upload Resume",
+                            "isDisable": false,
+                            "isVisible": true,
+                            "required": true
+                        },                       
+                        {
+                            "name": "btnGroupInput",
+                            "ids": 3.2,
+                            "type": "url",
+                            "inputLabel": "Refernce URL",
+                            "isDisable": false,
+                            "isVisible": true,
+                            "required": true
+                        },
+                        {
+                            "name": "btnGroupInput",
+                            "ids": 4,
+                            "type": "email",
+                            "inputLabel": "Email",
+                            "isDisable": false,
+                            "isVisible": true,
+                            "required": true
+                        }
+                    ]
+                }
+            },
+            "radioSection":{
+                "sectionId_2": 2.1,
+                "sectionName": "firstRadioSection",
+                "uiObjects": {
+                    "formType": "radioGroup",
+                    "label": "Gender",
+                    "radioOptions": [
+                        {
+                            "ids": "selectMale",
+                            "type": "radio",
+                            "name": "btnGroupRadio",
+                            "radioLabel": "Male",
+                            "isDisable": false,
+                            "isVisible": true,
+                            "required": true
+                        },
+                        {
+                            "ids": "selectFeMale",
+                            "type": "radio",
+                            "name": "btnGroupRadio",
+                            "radioLabel": "Female",
+                            "isDisable": false,
+                            "isVisible": true,
+                            "required": true
+                        },
+                        {
+                            "ids": "selectOthers",
+                            "type": "radio",
+                            "name": "btnGroupRadio",
+                            "radioLabel": "Other",
+                            "isDisable": false,
+                            "isVisible": true,
+                            "required": true
+                        }
+                    ]
+                }
+            },
+            "dropDownSection":{               
+                "uiObjects": {
+                    "selectOptions": [
+                        {
+                            "ids":0,
+                            "values": 0,
+                            "radioLabel": "Select",
+                            "selected": "selected"
+                        },
+                        {
+                            "ids":1,
+                            "values": 1,
+                            "radioLabel": "Reading"
+                        },
+                        {
+                            "ids":2,
+                            "values": 2,
+                            "radioLabel": "Movies"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

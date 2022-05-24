@@ -13,17 +13,17 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  "tabbedNav"=
-    [{
-      "id":"nav-login-tab",
-      "class":"nav-link active",
-      "link":"#nav-login",      
-      "tabName":"Login"
-    },
-    {
-      "id":"nav-registration-tab",
-      "class":"nav-link",      
-      "link":"#nav-registration",
-      "tabName":"Registration"
-    }]
+  // "tabbedNav"=
+  //   [{
+  //     "id":"nav-login-tab",
+  //     "class":"nav-link active",
+  //     "link":"#nav-login",      
+  //     "tabName":"Login"
+  //   },
+  //   {
+  //     "id":"nav-registration-tab",
+  //     "class":"nav-link",      
+  //     "link":"#nav-registration",
+  //     "tabName":"Registration"
+  //   }]
 }
