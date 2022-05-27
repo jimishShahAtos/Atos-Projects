@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SectionsService } from '../services/sections.service';
+import { FormsService } from '../services/forms.service';
 
 
 @Component({
@@ -9,19 +9,18 @@ import { SectionsService } from '../services/sections.service';
 })
 export class RegistrationComponent implements OnInit {
   inputData: string = "";
-
-  title:string="User Registration";
-  formInfo:any;
+  formDetails:any;
   sections: any;
   optionsData:any;
   radioBtnData:any;
   actionButton="Submit";
 
-  constructor(private formInputData: SectionsService) {
-    formInputData.getFormInput().subscribe((inputData)=>{
-      this.formInfo = inputData;
-      console.log(this.formInfo);
+  constructor(private formsService: FormsService) {
+    formsService.getForm().subscribe((inputData)=>{
+      this.formDetails = inputData;
+      console.log(this.formDetails);
     });
+    
   }
 
   ngOnInit(): void {

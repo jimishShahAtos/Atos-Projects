@@ -1,12 +1,13 @@
 <div class="container card p-4">
-    <div *ngFor="let headings of formInfo.titles">
+    <div *ngFor="let headings of formDetails.titles">
         <h2 
-            *ngIf="headings.titleReg==='User Registration'" 
-            class="text-primary mb-3">{{headings.titleReg}}</h2>
+            *ngIf="headings?.titleReg==='User Registration'" 
+            class="text-primary mb-3">{{headings?.titleReg}}</h2>
     </div>
     
+    
     <form action="">
-        <div class="section" *ngFor="let formData of formInfo.inputSection">
+        <div class="section" *ngFor="let formData of formDetails?.inputSection">
             <div class="row innerSection mb-3" *ngFor="let inputOpt of formData.uiObjects; let i = index;">
                 <div class="col-sm-12" *ngIf="inputOpt.name==='textInput' && inputOpt.isVisible===true">
                     <label for="{{i}}" class="form-label">
@@ -17,8 +18,8 @@
                         *ngIf="inputOpt.name==='textInput' && inputOpt.isVisible===true"
                         [type]="inputOpt.type" 
                         id="{{i}}"
-                        [disabled]="inputOpt.isDisable" 
-                        [required]="inputOpt.isRequired" 
+                        [disabled]="inputOpt?.isDisable" 
+                        [required]="inputOpt?.isRequired" 
                         autocomplete="off" />
                 </div>
 
@@ -58,7 +59,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>            
         </div>
 
         <div class="buttonSection">

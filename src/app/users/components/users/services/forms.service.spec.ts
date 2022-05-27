@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SectionsService } from './sections.service';
+import { SectionsService } from './forms.service';
 
 describe('SectionsService', () => {
   let service: SectionsService;
