@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsService } from '../services/forms.service';
 
-
 @Component({
   selector: 'app-registration',
-  templateUrl: './registration.component.html',
-  styleUrls: ['./registration.component.scss']
+  templateUrl: './renderingEngine.component.html',
+  styleUrls: ['./renderingEngine.component.scss']
 })
-export class RegistrationComponent implements OnInit {
+export class RenderingEngineComponent implements OnInit {
   inputData: string = "";
   formDetails:any;
   sections: any;

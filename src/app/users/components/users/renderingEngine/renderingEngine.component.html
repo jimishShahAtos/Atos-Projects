@@ -1,10 +1,8 @@
 <div class="container card p-4">
     <div *ngFor="let headings of formDetails.titles">
-        <h2 
-            *ngIf="headings?.titleReg==='User Registration'" 
-            class="text-primary mb-3">{{headings?.titleReg}}</h2>
+        <h2
+            class="text-primary mb-3">{{headings.title}}</h2>
     </div>
-    
     
     <form action="">
         <div class="section" *ngFor="let formData of formDetails?.inputSection">
