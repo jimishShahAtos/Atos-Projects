@@ -5,12 +5,16 @@ import { UsersComponent } from './components/users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/users/login/login.component';
 import { RenderingEngineComponent } from './components/users/renderingEngine/renderingEngine.component';
+import { DashboardComponent } from './components/users/dashboard/dashboard.component';
+import { EducationalInfoComponent } from './components/users/educational-info/educational-info.component';
 
 @NgModule({
   declarations: [
     UsersComponent,
     RenderingEngineComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
+    EducationalInfoComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +22,11 @@ import { RenderingEngineComponent } from './components/users/renderingEngine/ren
     HttpClientModule
   ],
   exports:[
-    UsersComponent
+    UsersComponent,
+    RenderingEngineComponent,
+    LoginComponent,
+    DashboardComponent,
+    EducationalInfoComponent
   ]
 })
 export class UsersModule { }

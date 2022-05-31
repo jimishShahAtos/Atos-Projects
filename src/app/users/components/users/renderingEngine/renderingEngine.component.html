@@ -1,4 +1,4 @@
-<div class="container card p-4">
+<div class="container-fluid card p-4 mt-3" *ngIf="'personalInfoUrl === sections'">
     <div *ngFor="let headings of formDetails.titles">
         <h2
             class="text-primary mb-3">{{headings.title}}</h2>
@@ -65,4 +65,8 @@
             <input type="reset" class="btn btn-secondary" click="clearInput()" value="Reset" />
         </div>
     </form>
+</div>
+
+<div class="container-fluid card p-4 mt-3" *ngIf="'personalInfoUrl === educationalInfoUrl'">
+    Education Info Loaded
 </div>

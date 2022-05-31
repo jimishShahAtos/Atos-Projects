@@ -1,0 +1,17 @@
+<nav class="nav nav-pills" id="pills-tab" role="tablist">
+    <a class="nav-link" id="pills-one-tab" data-bs-toggle="pill" href="#pills-one" role="tab"
+        aria-controls="pills-obe" aria-selected="true">Personal Info</a>
+
+    <a  click="getEducationInfoForm()" class="nav-link active" id="pills-two-tab" data-bs-toggle="pill" href="#pills-two" role="tab"
+        aria-controls="pills-profile" aria-selected="false">Educational Info</a>
+</nav>
+
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane" id="pills-one" role="tabpanel" aria-labelledby="pills-one-tab">
+        <app-rederingEngine></app-rederingEngine>
+    </div>
+
+    <div class="tab-pane fade show active" id="pills-two" role="tabpanel" aria-labelledby="pills-two-tab">
+        <app-educational-info></app-educational-info>
+    </div>
+</div>

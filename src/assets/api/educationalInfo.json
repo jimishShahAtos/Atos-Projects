@@ -1,40 +1,5 @@
-import { Injectable } from '@angular/core';
-import { NetworkManager } from '../../../../util/networkManager';
-
-@Injectable({
-  providedIn: 'root'
-})
-
-export class FormsService {
-  baseUrl = 'http://localhost:3000';
-  personalInfoUrl = this.baseUrl + '/sections';
-  educationalInfoUrl = this.baseUrl + '/educationSections';
-
-  constructor(public networkManager: NetworkManager) {
-    this.educationInfoUrl;
-    console.log(this.educationInfoUrl);
-  }
-  
-  getPersonalInfoForm(){
-    return this.networkManager.getAPI(this.personalInfoUrl);
-  }
-
-  getEducationInfoForm(){
-    return this.networkManager.getAPI(this.educationalInfoUrl);
-  }
-
-  
-
-
-
-//   getEducationInfoForm(){             
-//     this.educationInfoUrl;
-//     console.log(this.educationInfoUrl);
-//   }
-  
-
-"educationInfoUrl" = {
-    "sections":{
+{
+    "EducationSections":{
         "titles":[
             {
                 "title":"Educational Info"
@@ -99,7 +64,4 @@ export class FormsService {
             }
         ]
     }
-}
-
-
 }
