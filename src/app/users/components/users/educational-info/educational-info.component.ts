@@ -8,11 +8,13 @@ import { FormsService } from '../services/forms.service';
 })
 
 export class EducationalInfoComponent implements OnInit {
-  formDetails:string = ' ';
+  emplDetails:any;
   inputData:string=' ';
 
   constructor(public formsService: FormsService) {
-    // formsService = this.formDetails;
+    formsService.getEducationInfoForm().subscribe((inputData)=>{
+      this.emplDetails = inputData;
+    }); 
   }
 
   ngOnInit(): void {

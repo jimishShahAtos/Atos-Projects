@@ -169,7 +169,7 @@
             }
         ]
     },
-    "educationSections":{
+    "EducationSections":{
         "titles":[
             {
                 "title":"Educational Info"
@@ -177,19 +177,16 @@
         ],
         "inputSection": [
             {
-                "sectionId": 1,
-                "sectionName": "SectionOne",
-                "sectionTitle": "Post Graduation Details",
-                "isVisible": false,
                 "uiObjects": [
                     {
-                        "name": "textInput",
-                        "ids": 1,
-                        "type": "text",
+                        "isName": "textInput",
+                        "isIds": 1,
+                        "isType": "text",
                         "inputLabel": "Course Name",
-                        "autocomplete":"off",
+                        "isAutocomplete":"off",
                         "isDisable": false,
                         "isVisible": true,
+                        "isPlaceholder":"Please Enter Course Name",
                         "validationRules":
                         [
                             {  
@@ -200,35 +197,38 @@
                         "isRequired": true
                     },
                     {
-                        "name": "textInput",
-                        "ids": 1.2,
-                        "type": "text",
+                        "isName": "textInput",
+                        "isIds": 2,
+                        "isType": "text",
                         "inputLabel": "University / Institute Name",
-                        "autocomplete":"off",
+                        "isAutocomplete":"off",
                         "isDisable": false,
                         "isVisible": true,
-                        "isRequired": true
+                        "isRequired": true,
+                        "isPlaceholder":"Please Enter University/Institute Name"
                     },                    
                                       
                     {
-                        "name": "textInput",
-                        "ids": 1.4,
-                        "type": "date",
-                        "inputLabel": "passing Year [Calender-Year Selection]",
-                        "autocomplete":"off",
+                        "isName": "textInput",
+                        "isIds": 3,
+                        "isType": "month",
+                        "inputLabel": "passing Year [Calender - year selection]",
+                        "isAutocomplete":"off",
                         "isDisable": false,
                         "isVisible": true,
-                        "isRequired": true
+                        "isRequired": true,
+                        "isPlaceholder":"MMMM/YYYY"
                     },                    
                     {
-                        "name": "textInput",
-                        "ids": 1.5,
-                        "type": "text",
-                        "inputLabel": "GPA/Percentage",
-                        "autocomplete":"off",
+                        "isName": "textInput",
+                        "isIds": 4,
+                        "isType": "number",
+                        "inputLabel": "GPA / percentage",
+                        "isAutocomplete":"off",
                         "isDisable": false,
                         "isVisible": true,
-                        "isRequired": true
+                        "isRequired": true,
+                        "isPlaceholder":"Passing Year in number"
                     }
                 ]
             }

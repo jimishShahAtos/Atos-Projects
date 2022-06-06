@@ -2,7 +2,6 @@
   "name": "dynamic-forms",
   "version": "0.0.0",
   "scripts": {
-    "servers": "concurrently --kill-others \"json-server --host 0.0.0.0 --watch personalInfo.json --port3000\"",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

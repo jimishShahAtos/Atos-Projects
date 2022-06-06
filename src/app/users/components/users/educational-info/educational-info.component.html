@@ -1,19 +1,17 @@
-<div class="container-fluid card p-4 mt-3">
-    <!-- <h2 class="text-primary mb-3">Educational Info</h2> -->
-    <h2 class="text-primary mb-3">{{educationInfoUrl.sections.titles[0].title}}</h2>
+<div class="container-fluid card p-4 mt-3" *ngFor="let headings of emplDetails.titles">
+    <h2 class="text-primary mb-3">
+        Educational Info
+    </h2>
 
     <form action="">
-        <!-- <div class="section">
-            <div class="col-sm-12 mb-3">
-                <label class="form-label">Course Name</label>
-                <input class="form-control form-control-sm" type="text" id="1" required="required" autocomplete="off" />
+        <div class="section">
+            <div class="col-sm-12 mb-3" *ngFor="let employees of emplDetails?.inputSection">
+                <div class="row innerSection mb-3" *ngFor="let inputOptn of employees?.uiObjects">
+                    <label class="form-label" [for]="inputOptn.isIds">{{inputOptn.inputLabel |titlecase}}</label>
+                    <input class="form-control form-control-sm" [type]="inputOptn.isType" [id]="inputOptn.isIds" [required]="inputOptn.isRequired" [autocomplete]="inputOptn.isAutocomplete" [placeholder]="inputOptn.isPlaceholder | titlecase" [disabled]="inputOptn.isDisable" [name]="inputOptn.isName" />
+                </div>
             </div>
-
-            <div class="col-sm-12 mb-3">
-                <label class="form-label">Course Name</label>
-                <input class="form-control form-control-sm" type="text" id="1" required="required" autocomplete="off" />
-            </div>
-        </div> -->
+        </div>
 
         <div class="buttonSection">
             <input type="submit" class="btn btn-primary me-2" value="Submit" />
