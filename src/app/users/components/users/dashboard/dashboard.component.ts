@@ -33,19 +33,26 @@ export class DashboardComponent implements OnInit {
     this.personalInfo = RenderingEngineComponent;
     setTimeout(()=>{                           
       this.loader = false;
-    }, 1000)
+    }, 1000);
   }
 
   getPersonalInfo(){
-    setTimeout(()=>{                           
+    this.loader = true;
+    setTimeout(() => {
       this.loader = false;
-    }, 1000)
+    }, 2000);
+
     this.personalInfoServ.getPersonalInfoForm().subscribe((inputData) => {
       this.formPersDetails = inputData;
     });
   }
 
   getEducationInfo(){
+    this.loader = true;
+    setTimeout(() => {
+      this.loader = false;
+    }, 2000);
+    
     this.educationInfoServ.getEducationInfoForm().subscribe((inputData) => {
       this.formPersDetails = inputData;
     });

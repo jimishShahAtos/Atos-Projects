@@ -13,8 +13,10 @@ export class PersonalInfoService extends FormsService {
     super();
   }
 
+  ngOnInit(): void {
+  }
+
   getPersonalInfoForm(){
-    // alert("In getPersonalInfoForm Mehtod...")
     return this.networkManager.getAPI(this.personalInfoUrl);
   }
   
