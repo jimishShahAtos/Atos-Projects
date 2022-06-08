@@ -6,15 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/users/login/login.component';
 import { RenderingEngineComponent } from './components/users/renderingEngine/renderingEngine.component';
 import { DashboardComponent } from './components/users/dashboard/dashboard.component';
-import { EducationalInfoComponent } from './components/users/educational-info/educational-info.component';
+
 
 @NgModule({
   declarations: [
     UsersComponent,
     RenderingEngineComponent,
     LoginComponent,
-    DashboardComponent,
-    EducationalInfoComponent
+    DashboardComponent
   ],
   imports: [
     CommonModule,
@@ -25,8 +24,7 @@ import { EducationalInfoComponent } from './components/users/educational-info/ed
     UsersComponent,
     RenderingEngineComponent,
     LoginComponent,
-    DashboardComponent,
-    EducationalInfoComponent
+    DashboardComponent
   ]
 })
 export class UsersModule { }

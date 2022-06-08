@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container card border-0">
     <nav class="nav nav-pills" id="pills-tab" role="tablist">
         <a class="nav-link active" id="pills-one-tab" data-bs-toggle="pill" href="#pills-one" role="tab"
             aria-controls="pills-one" aria-selected="true" (click)="getPersonalInfo()">Personal Info</a>
@@ -6,91 +6,8 @@
         <a class="nav-link" id="pills-two-tab" data-bs-toggle="pill" href="#pills-two" role="tab"
         aria-controls="pills-profile" aria-selected="false" (click)="getEducationInfo()">Educational Info</a>
     </nav>
-
-    <div class="tab-content" id="pills-tabContent">
-        <div class="d-flex justify-content-center position-absolute h-100 w-100">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status" *ngIf="loader">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </div>
-        <div class="tab-pane show active" id="pills-one" role="tabpanel" aria-labelledby="pills-one-tab">      
-            <div class="formSection container-fluid card p-4 mt-3" *ngFor="let formData of formPersDetails.inputSection">             
-                <div *ngFor="let headings of formPersDetails.titles">
-                    <h2 class="text-primary mb-3">{{headings.title}}</h2>
-                </div>
-
-                <form action="" *ngFor="let formData of formPersDetails?.inputSection">
-                    <div class="section" [id]="formData.sectionId">
-                        <div class="row innerSection mb-3" *ngFor="let inputOpt of formData.uiObjects; let i = index;">
-                            <div class="col-sm-12" *ngIf="inputOpt.name==='textInput' && inputOpt.isVisible===true">
-                                <label for="{{i}}" class="form-label">
-                                    {{inputOpt.inputLabel}}
-                                </label>
-
-                                <input class="form-control form-control-sm w-75"
-                                    *ngIf="inputOpt.name==='textInput' && inputOpt.isVisible===true"
-                                    [type]="inputOpt.type" id="{{i}}" [disabled]="inputOpt?.isDisable"
-                                    [required]="inputOpt?.isRequired" autocomplete="off" />
-                            </div>
-
-                            <div class="col-sm-12">
-                                <div class="col-sm-12" *ngIf="inputOpt.name==='dropDown' && inputOpt.isVisible===true">
-                                    <label [for]="inputOpt.ids" class="form-label">{{inputOpt.inputLabel}}</label>
-                                    <select class="form-select form-select-sm w-75"
-                                        *ngIf="inputOpt.name==='dropDown' && inputOpt.isVisible===true" id="{{i}}"
-                                        [disabled]="inputOpt.isDisable" [required]="inputOpt.isRequired">
-                                        <option *ngFor="let inputRadioOpt of inputOpt.selectOptions"
-                                            [selected]="inputRadioOpt.selected" [value]="inputRadioOpt.values">
-                                            {{inputRadioOpt.label}}
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div *ngIf="inputOpt.name==='radioInput'">
-                                <label class="form-check-label d-block pb-1" [id]="inputOpt.ids"
-                                    for="{{inputOpt.ids}}">{{inputOpt.inputLabel}}</label>
-                                <div class="form-check form-check-inline px-0"
-                                    *ngFor="let radioOpt of inputOpt.radioOptions">
-                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                        <input [type]="radioOpt.type" class="btn-check" [name]="radioOpt.type"
-                                            id="{{i}}" autocomplete="off" [checked]="radioOpt.checked"
-                                            [required]="radioOpt.isRequired">
-                                        <label class="btn btn-outline-primary" for="{{i}}">{{radioOpt.label}}</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-
-        <div class="tab-pane" id="pills-two" role="tabpanel" aria-labelledby="pills-two-tab">
-            <div class="formSection container-fluid card p-4 mt-3">
-                <h2 class="text-primary mb-3" *ngFor="let headings of formPersDetails.titles">
-                    {{headings.title}}
-                </h2>
-
-                <form action="">
-                    <div class="section">
-                        <div class="col-sm-12 mb-3" *ngFor="let employees of formPersDetails?.inputSection">
-                            <div class="row innerSection mb-3" *ngFor="let inputOptn of employees?.uiObjects">
-                                <label class="form-label ms-1"
-                                    [for]="inputOptn.isIds">{{inputOptn.inputLabel|titlecase}}</label>
-                                <input class="form-control form-control-sm ms-3 w-75" [type]="inputOptn.isType"
-                                    [id]="inputOptn.isIds" [required]="inputOptn.isRequired"
-                                    [autocomplete]="inputOptn.isAutocomplete"
-                                    [placeholder]="inputOptn.isPlaceholder | titlecase" [disabled]="inputOptn.isDisable"
-                                    [name]="inputOptn.isName" />
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    
+    <app-rederingEngine></app-rederingEngine>
 
     <div class="buttonSection mt-3">
         <input type="submit" class="btn btn-primary me-2" value="Submit" />

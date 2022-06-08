@@ -4,7 +4,6 @@ import { NetworkManager } from 'src/app/util/networkManager';
 import { EducationInfoService } from '../services/EducationInfo.service';
 import { RenderingEngineComponent } from '../renderingEngine/renderingEngine.component';
 
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -15,8 +14,7 @@ export class DashboardComponent implements OnInit {
   personalInfo:any;
   showVar : boolean = true;
   inputData: string = "";
-  formPersDetails: any;
-  formEduDetails: any;
+  formDetails: any;
   sections: any;
   optionsData: any;
   radioBtnData: any;
@@ -29,32 +27,17 @@ export class DashboardComponent implements OnInit {
     public networkManager: NetworkManager
   ){}
 
-  ngOnInit(): void {
-    this.personalInfo = RenderingEngineComponent;
-    setTimeout(()=>{                           
-      this.loader = false;
-    }, 1000);
-  }
+  ngOnInit(): void {}
 
   getPersonalInfo(){
-    this.loader = true;
-    setTimeout(() => {
-      this.loader = false;
-    }, 2000);
-
     this.personalInfoServ.getPersonalInfoForm().subscribe((inputData) => {
-      this.formPersDetails = inputData;
+      this.formDetails = inputData;
     });
   }
 
-  getEducationInfo(){
-    this.loader = true;
-    setTimeout(() => {
-      this.loader = false;
-    }, 2000);
-    
+  getEducationInfo(){   
     this.educationInfoServ.getEducationInfoForm().subscribe((inputData) => {
-      this.formPersDetails = inputData;
+      this.formDetails = inputData;
     });
   }
 }
