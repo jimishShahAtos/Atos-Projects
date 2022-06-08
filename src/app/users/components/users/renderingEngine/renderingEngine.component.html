@@ -12,23 +12,22 @@
 
             <form action="" *ngFor="let formData of formPersDetails?.inputSection">
                 <div class="section" [id]="formData.sectionId">
-                    <div class="row innerSection mb-3" *ngFor="let inputOpt of formData.uiObjects; let i = index;">
+                    <div class="row innerSection mb-3" *ngFor="let inputOpt of formData.uiObjects;">
                         <div class="col-sm-12" *ngIf="inputOpt.name==='textInput' && inputOpt.isVisible===true">
-                            <label for="{{i}}" class="form-label">
+                            <label [for]="inputOpt.ids" class="form-label">
                                 {{inputOpt.inputLabel}}
                             </label>
 
                             <input class="form-control form-control-sm w-75"
                                 *ngIf="inputOpt.name==='textInput' && inputOpt.isVisible===true"
-                                [type]="inputOpt.type" id="{{i}}" [disabled]="inputOpt?.isDisable"
-                                [required]="inputOpt?.isRequired" autocomplete="off" />
+                                [type]="inputOpt.type" [id]="inputOpt.ids" [disabled]="inputOpt?.isDisable" [required]="inputOpt?.isRequired" autocomplete="off" [placeholder]="inputOpt?.isPlaceholder" />
                         </div>
 
                         <div class="col-sm-12">
                             <div class="col-sm-12" *ngIf="inputOpt.name==='dropDown' && inputOpt.isVisible===true">
                                 <label [for]="inputOpt.ids" class="form-label">{{inputOpt.inputLabel}}</label>
-                                <select class="form-select form-select-sm w-75"
-                                    *ngIf="inputOpt.name==='dropDown' && inputOpt.isVisible===true" id="{{i}}"
+                                <select [id]="inputOpt.ids" class="form-select form-select-sm w-75"
+                                    *ngIf="inputOpt.name==='dropDown' && inputOpt.isVisible===true" [id]="inputOpt.ids"
                                     [disabled]="inputOpt.isDisable" [required]="inputOpt.isRequired">
                                     <option *ngFor="let inputRadioOpt of inputOpt.selectOptions"
                                         [selected]="inputRadioOpt.selected" [value]="inputRadioOpt.values">
@@ -45,9 +44,9 @@
                                 *ngFor="let radioOpt of inputOpt.radioOptions">
                                 <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                                     <input [type]="radioOpt.type" class="btn-check" [name]="radioOpt.type"
-                                        id="{{i}}" autocomplete="off" [checked]="radioOpt.checked"
+                                        [id]="radioOpt.ids" autocomplete="off" [checked]="radioOpt.checked"
                                         [required]="radioOpt.isRequired">
-                                    <label class="btn btn-outline-primary" for="{{i}}">{{radioOpt.label}}</label>
+                                    <label class="btn btn-outline-primary" [for]="radioOpt.ids">{{radioOpt.label}}</label>
                                 </div>
                             </div>
                         </div>

@@ -14,12 +14,13 @@
                 "uiObjects": [
                     {
                         "name": "textInput",
-                        "ids": 1,
+                        "ids": 1.1,
                         "type": "text",
                         "inputLabel": "First Name",
                         "autocomplete":"off",
                         "isDisable": false,
                         "isVisible": true,
+                        "isPlaceholder":"Please Enter First Name",
                         "validationRules":
                         [
                             {  
@@ -31,31 +32,33 @@
                     },
                     {
                         "name": "textInput",
-                        "ids": 2,
+                        "ids": 1.2,
                         "type": "text",
                         "inputLabel": "Last Name",
                         "autocomplete":"off",
                         "isDisable": false,
                         "isVisible": true,
-                        "isRequired": true
+                        "isRequired": true,
+                        "isPlaceholder":"Please Enter Last Name"
                     },
                     {
                         "name": "textInput",
-                        "ids": 3,
+                        "ids": 1.3,
                         "type": "email",
                         "inputLabel": "Email",
                         "autocomplete":"off",
                         "isDisable": false,
                         "isVisible": true,
-                        "isRequired": true
+                        "isRequired": true,
+                        "isPlaceholder":"xyz@xyz.com"
                     },
                     {
                         "name": "radioInput",
-                        "ids": 4,
+                        "ids": 1.4,
                         "inputLabel": "Gender",
                         "radioOptions": [
                             {
-                                "id": 4.1,
+                                "ids": "radio_1",
                                 "type": "radio",
                                 "label": "Male",
                                 "checked":false,
@@ -64,7 +67,7 @@
                                 "isRequired": true
                             },
                             {
-                                "id": 4.2,
+                                "ids": "radio_2",
                                 "type": "radio",
                                 "label": "Female",
                                 "checked":false,
@@ -73,7 +76,7 @@
                                 "isRequired": true
                             },
                             {
-                                "id": 4.3,
+                                "ids": "radio_3",
                                 "type": "radio",
                                 "label": "Others",
                                 "checked":false,
@@ -85,7 +88,7 @@
                     },                    
                     {
                         "name": "textInput",
-                        "ids": 5,
+                        "ids": 1.4,
                         "type": "date",
                         "inputLabel": "Date Of Birth",
                         "autocomplete":"off",
@@ -95,11 +98,11 @@
                     },
                     {
                         "name": "radioInput",
-                        "ids": 6,
+                        "ids": 1.5,
                         "inputLabel": "Nationality",
                         "radioOptions": [
                             {
-                                "id": 6.1,
+                                "ids": "radio_4",
                                 "type": "radio",
                                 "label": "Indian",
                                 "checked":false,
@@ -108,7 +111,7 @@
                                 "isRequired": true
                             },
                             {
-                                "id": 6.2,
+                                "ids": "radio_5",
                                 "type": "radio",
                                 "label": "Outside India",
                                 "checked":false,
@@ -120,7 +123,7 @@
                     },
                     {
                         "name": "dropDown",
-                        "ids": 7,
+                        "ids": 1.6,
                         "inputLabel": "Hobbies",
                         "isDisable": false,
                         "isVisible": true,
@@ -147,30 +150,32 @@
                     },
                     {
                         "name": "textInput",
-                        "ids": 8,
+                        "ids": 1.7,
                         "type": "password",
                         "inputLabel": "Enter New Password",
                         "autocomplete":"off",
                         "isDisable": false,
                         "isVisible": true,
-                        "isRequired": true
+                        "isRequired": true,
+                        "isPlaceholder":"Enter New Password"
                     },
                     {
                         "name": "textInput",
-                        "ids": 9,
+                        "ids": 1.8,
                         "type": "password",
                         "inputLabel": "Re-Enter New Password",
                         "autocomplete":"off",
                         "isDisable": false,
                         "isVisible": true,
-                        "isRequired": true
+                        "isRequired": true,
+                        "isPlaceholder":"Re-enter New Password"
                     }
                 ]
             }
         ]
     },
     "EducationSections":{
-        "titles":[
+        "titles-":[
             {
                 "title":"Educational Info"
             }
@@ -180,7 +185,7 @@
                 "uiObjects": [
                     {
                         "isName": "textInput",
-                        "isIds": 1,
+                        "isIds": 1.9,
                         "isType": "text",
                         "inputLabel": "Course Name",
                         "isAutocomplete":"off",
@@ -198,7 +203,7 @@
                     },
                     {
                         "isName": "textInput",
-                        "isIds": 2,
+                        "isIds": 1.11,
                         "isType": "text",
                         "inputLabel": "University / Institute Name",
                         "isAutocomplete":"off",
@@ -210,7 +215,7 @@
                                       
                     {
                         "isName": "textInput",
-                        "isIds": 3,
+                        "isIds": 1.12,
                         "isType": "month",
                         "inputLabel": "passing Year [Calender - year selection]",
                         "isAutocomplete":"off",
@@ -221,7 +226,7 @@
                     },                    
                     {
                         "isName": "textInput",
-                        "isIds": 4,
+                        "isIds": 1.13,
                         "isType": "number",
                         "inputLabel": "GPA / percentage",
                         "isAutocomplete":"off",
