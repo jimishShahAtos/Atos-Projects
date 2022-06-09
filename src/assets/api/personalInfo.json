@@ -1,0 +1,237 @@
+{
+    "sections":{
+        "titles":[
+            {
+                "title":"Personal Info"
+            }
+        ],
+        "inputSection": [            
+            {
+                "sectionId": 1,
+                "sectionName": "SectionOne",
+                "sectionTitle": "Personal Info",
+                "isVisible": false,
+                "uiObjects": [
+                    {
+                        "name": "textInput",
+                        "ids": 1,
+                        "type": "text",
+                        "inputLabel": "First Name",
+                        "autocomplete":"off",
+                        "isDisable": false,
+                        "isVisible": true,
+                        "validationRules":
+                        [
+                            {  
+                                "minLength":2,
+                                "maxLength":10
+                            }
+                        ],
+                        "isRequired": true
+                    },
+                    {
+                        "name": "textInput",
+                        "ids": 2,
+                        "type": "text",
+                        "inputLabel": "Last Name",
+                        "autocomplete":"off",
+                        "isDisable": false,
+                        "isVisible": true,
+                        "isRequired": true
+                    },
+                    {
+                        "name": "textInput",
+                        "ids": 3,
+                        "type": "email",
+                        "inputLabel": "Email",
+                        "autocomplete":"off",
+                        "isDisable": false,
+                        "isVisible": true,
+                        "isRequired": true
+                    },
+                    {
+                        "name": "radioInput",
+                        "ids": 4,
+                        "inputLabel": "Gender",
+                        "radioOptions": [
+                            {
+                                "id": 4.1,
+                                "type": "radio",
+                                "label": "Male",
+                                "checked":false,
+                                "isDisable": false,
+                                "isVisible": true,
+                                "isRequired": true
+                            },
+                            {
+                                "id": 4.2,
+                                "type": "radio",
+                                "label": "Female",
+                                "checked":false,
+                                "isDisable": false,
+                                "isVisible": true,
+                                "isRequired": true
+                            },
+                            {
+                                "id": 4.3,
+                                "type": "radio",
+                                "label": "Others",
+                                "checked":false,
+                                "isDisable": false,
+                                "isVisible": true,
+                                "isRequired": true
+                            }
+                        ]
+                    },                    
+                    {
+                        "name": "textInput",
+                        "ids": 5,
+                        "type": "date",
+                        "inputLabel": "Date Of Birth",
+                        "autocomplete":"off",
+                        "isDisable": false,
+                        "isVisible": true,
+                        "isRequired": true
+                    },
+                    {
+                        "name": "radioInput",
+                        "ids": 6,
+                        "inputLabel": "Nationality",
+                        "radioOptions": [
+                            {
+                                "id": 6.1,
+                                "type": "radio",
+                                "label": "Indian",
+                                "checked":false,
+                                "isDisable": false,
+                                "isVisible": false,
+                                "isRequired": true
+                            },
+                            {
+                                "id": 6.2,
+                                "type": "radio",
+                                "label": "Outside India",
+                                "checked":false,
+                                "isDisable": false,
+                                "isVisible": false,
+                                "isRequired": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "dropDown",
+                        "ids": 7,
+                        "inputLabel": "Hobbies",
+                        "isDisable": false,
+                        "isVisible": true,
+                        "isRequired": true,
+                        "selectOptions": [
+                            {
+                                "values": "Select",
+                                "label": "Select",
+                                "selected": "selected"
+                            },
+                            {
+                                "values": "Reading",
+                                "label": "Reading"
+                            },
+                            {
+                                "values": "Movies",
+                                "label": "Movies"
+                            },
+                            {
+                                "values": "Sports",
+                                "label": "Movies"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "textInput",
+                        "ids": 8,
+                        "type": "password",
+                        "inputLabel": "Enter New Password",
+                        "autocomplete":"off",
+                        "isDisable": false,
+                        "isVisible": true,
+                        "isRequired": true
+                    },
+                    {
+                        "name": "textInput",
+                        "ids": 9,
+                        "type": "password",
+                        "inputLabel": "Re-Enter New Password",
+                        "autocomplete":"off",
+                        "isDisable": false,
+                        "isVisible": true,
+                        "isRequired": true
+                    }
+                ]
+            }
+        ]
+    },
+    "EducationSections":{
+        "titles":[
+            {
+                "title":"Educational Info"
+            }
+        ],
+        "inputSection": [
+            {
+                "uiObjects": [
+                    {
+                        "isName": "textInput",
+                        "isIds": 1,
+                        "isType": "text",
+                        "inputLabel": "Course Name",
+                        "isAutocomplete":"off",
+                        "isDisable": false,
+                        "isVisible": true,
+                        "isPlaceholder":"Please Enter Course Name",
+                        "validationRules":
+                        [
+                            {  
+                                "minLength":2,
+                                "maxLength":10
+                            }
+                        ],
+                        "isRequired": true
+                    },
+                    {
+                        "isName": "textInput",
+                        "isIds": 2,
+                        "isType": "text",
+                        "inputLabel": "University / Institute Name",
+                        "isAutocomplete":"off",
+                        "isDisable": false,
+                        "isVisible": true,
+                        "isRequired": true,
+                        "isPlaceholder":"Please Enter University/Institute Name"
+                    },                    
+                                      
+                    {
+                        "isName": "textInput",
+                        "isIds": 3,
+                        "isType": "month",
+                        "inputLabel": "passing Year [Calender - year selection]",
+                        "isAutocomplete":"off",
+                        "isDisable": false,
+                        "isVisible": true,
+                        "isRequired": true,
+                        "isPlaceholder":"MMMM/YYYY"
+                    },                    
+                    {
+                        "isName": "textInput",
+                        "isIds": 4,
+                        "isType": "number",
+                        "inputLabel": "GPA / percentage",
+                        "isAutocomplete":"off",
+                        "isDisable": false,
+                        "isVisible": true,
+                        "isRequired": true,
+                        "isPlaceholder":"Passing Year in number"
+                    }
+                ]
+            }
+        ]
+    }
+}
