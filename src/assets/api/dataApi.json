@@ -1,0 +1,46 @@
+{
+    "sections":{
+        "titles":[
+            {
+                "title":"Nacora Info"
+            }
+        ],
+        "inputSection": [            
+            {
+                "sectionId": 1,
+                "sectionName": "SectionOne",
+                "sectionTitle": "Login",
+                "isVisible": false,
+                "loginSection": [
+                    {
+                        "name": "textInput",
+                        "ids": 1,
+                        "type": "text",
+                        "inputLabel": "User ID",
+                        "autocomplete":"off",
+                        "isDisable": false,
+                        "isVisible": true,
+                        "validationRules":
+                        [
+                            {  
+                                "minLength":2,
+                                "maxLength":10
+                            }
+                        ],
+                        "isRequired": true
+                    },
+                    {
+                        "name": "textInput",
+                        "ids": 2,
+                        "type": "password",
+                        "inputLabel": "Password",
+                        "autocomplete":"off",
+                        "isDisable": false,
+                        "isVisible": true,
+                        "isRequired": true
+                    }
+                ]
+            }
+        ]
+    }
+}
